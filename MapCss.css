@@ -1,0 +1,60 @@
+.county {
+  stroke: grey;
+  stroke-width: 0.3;
+ }
+
+
+
+.legend-text {
+font-size:.7em;
+
+
+}
+#services,#team,#contact,#portfolio,#clients
+{
+
+display: none;
+
+}
+/* #services,#testimonials,#portfolio,#contact */
+/* { */
+
+/* display: none; */
+
+/* } */
+div.tooltip {
+
+  position: absolute;
+  text-align: center;
+  width: 140px;
+  height: 55px;
+  padding: 1px;
+  /* font: 12px sans-serif; */
+  background: white;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 8px;
+  pointer-events: none;
+  weight: bold;
+
+}
+  #legend-container {
+  fill: white;
+  opacity: 0.9;
+  stroke: grey;
+  stroke-width: 2;
+  /* font-size :9px; */
+}
+
+.selected{
+	stroke-width: 3;
+	/* stroke: black; */
+}
+
+.selectedRed{
+	stroke-width: 3;
+	stroke: orange;
+}
+
+
+

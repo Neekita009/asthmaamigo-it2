@@ -1306,7 +1306,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* } */
 
 @media only screen 
-and (min-width : 1224px) {
+and (min-width : 1000px) {
     #vizContainer{
 		width:1200px; 
 		height:600px;

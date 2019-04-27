@@ -3,7 +3,8 @@ d3.select(window)
     		.on("resize", sizeChange);
 // variable used in the js file
 var bool = false;
-			
+		
+ 
 // projection for the country Map  
 var projection = d3.geoEquirectangular()
 								   .center([ 132, -28 ])
@@ -37,6 +38,7 @@ var svg = d3.select("#containerChart")
 	
 	// fiunction to create map
 	run();
+	initViz();
 function run(){
 // data for the map from csv file
 	queue()
@@ -257,7 +259,24 @@ var legendContainerSettings = {
 	}
 	
 }
-	
+	   function initViz() {
+		      
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/shared/7JZ6J9HF6?:display_count=yes",
+                options = {
+                    hideTabs: false,
+				//	width: "800px",
+			//		height: "700px",
+                    onFirstInteractive: function () {
+                      // containerDiv.
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+            // Create a viz object and embed it in the container div.
+        
+		   
+	   }
 	// click function when victoria state is clicked
 	function clicked() {
 		
@@ -295,6 +314,7 @@ Plotly.newPlot('containerLine', data,layout,{responsive: true, displayModeBar: f
 	})
 	// Second graph
 	CreateSecondGraph();
+	
 	}    
 function CreateSecondGraph(){
 var gender = ['Male','Female']
@@ -344,6 +364,7 @@ var layout = {
 	function sizeChange() {
 	    d3.select("g").attr("transform", "scale(" + $("#containerChart").width()/900 + ")");
 	    $("svg").height($("#containerChart").width()*0.528);
+	
 if(bool == true)
 		{
 		clicked();

@@ -1309,6 +1309,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 and (min-width : 1000px) {
     #vizContainer{
 		width:1200px; 
-		height:600px;
+		height:450px;
 	}
 }

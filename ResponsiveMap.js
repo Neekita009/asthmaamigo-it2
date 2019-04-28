@@ -115,8 +115,8 @@ bool = true;
 					d3.select(this).classed("selected",true);
 			 tooltip.html(d.properties.STATE_NAME + ' Patient'+ ": "+ d.properties.Asthma)
         .styles({
-          'left': (d3.event.pageX) - 128 + 'px',
-          'top': (d3.event.pageY) - 1700 + 'px'
+          'left': (d3.event.pageX) - 138 + 'px',
+          'top': (d3.event.pageY) - 1800 + 'px'
         })
 		 tooltip.transition()
         .duration(200)

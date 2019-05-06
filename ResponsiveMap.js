@@ -38,6 +38,7 @@ var svg = d3.select("#containerChart")
 	
 	// fiunction to create map
 	run();
+	clicked();
 	initViz();
 function run(){
 // data for the map from csv file
@@ -115,8 +116,8 @@ bool = true;
 					d3.select(this).classed("selected",true);
 			 tooltip.html(d.properties.STATE_NAME + ' Patient'+ ": "+ d.properties.Asthma)
         .styles({
-          'left': (d3.event.pageX) - 138 + 'px',
-          'top': (d3.event.pageY) - 1800 + 'px'
+          'left': (d3.event.pageX)  + 'px',
+          'top': (d3.event.pageY)  + 'px'
         })
 		 tooltip.transition()
         .duration(200)
@@ -155,7 +156,7 @@ bool = true;
 					.on('click', function(d) {
 	if(d.properties.STATE_NAME == "Victoria")
 	{
- 		 clicked();
+ 		 // clicked();
 
 this.classList.add(".scrollto");
 document.getElementById("services").scrollIntoView(true);

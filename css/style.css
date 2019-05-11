@@ -26,7 +26,7 @@ a:active,
 a:focus {
   color: #51d8af;
   outline: none;
-  text-decoration: none;
+   text-decoration: none; 
 }
 
 p {
@@ -1261,7 +1261,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #header #logo img {
-    max-height: 48px;
+    max-height: 20px;
 	
 	
   }

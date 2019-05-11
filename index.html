@@ -41,93 +41,40 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="bs-stepper.min.css">
  <link rel="stylesheet" type="text/css" href="MapCss.css"> 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+   <link href="style2.css" rel="stylesheet">
+<!-- Stepper CSS -->
+<link href="css/addons-pro/steppers.css" rel="stylesheet">
+<!-- Stepper CSS - minified-->
+<link href="css/addons-pro/steppers.min.css" rel="stylesheet">
 
+<!-- Stepper JavaScript -->
+<script type="text/javascript" src="js/addons-pro/stepper.js"></script>
+<!-- Stepper JavaScript - minified -->
+<script type="text/javascript" src="js/addons-pro/stepper.min.js"></script>
 
 <style type="text/css">
-.button {
-  background-color:#000066; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.5);
-}
-
-.button1 {
-  background-color: white; 
-  color: #081e5b; 
-  border: 2px solid #000066;
-}
-
-
-#buttonposition{
-padding: 10px 0px 20px 80px;
-}
-.heading 
-{
-	 color: #0c2e8a;
+.cta-btn {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  font-family: "Raleway", sans-serif;
-  text-align: center;
-  
-	
-	
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 26px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 3px solid #fff;
+  color: #fff;
 }
 
-#boxWrap {
- margin: 0 auto;
- text-align:center;
-}
-.view {
-   width: 300px;
-	color:white;
-   margin: 0 15px 0px auto;
-   margin-left: auto;
-   margin-right: auto;
-   overflow: hidden;
-   background:#081e5b;
-   
-}
-
-#intropara{
-font-size:30px;
-padding: 80px 0px 20px 60px;
-color:white;
-}
-
-
-#step1{
-padding-top: 130px; 
-
-
-
-}
-
-@media (max-width: 768px) {
-
-#step1{
-padding-top: 80px; 
-height: 74px;
-
-
-}
-#step2{
-height: 74px;
-
-
-}
-
+.cta-btn:hover {
+  background: #50d8af;
+  border: 3px solid #50d8af;
+  color: black;
 }
 </style>
 
@@ -154,7 +101,7 @@ height: 74px;
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#body">Home</a></li>
+          <li class="menu-active"><a href="#">Home</a></li>
           <li><a href="aboutAsthma.html">About Asthma</a></li>
 		   <li><a href="main.html">Statistics</a></li>
 		  <!-- <li><a href="#clients">Asthma in Children</a></li> -->
@@ -166,43 +113,94 @@ height: 74px;
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
-
-    <div class="container-fluid">
+ <div class="container-fluid">
 	<br>
-	<section id="intro" class="wow fadeInUp">
-	
+	<section id="intro">
 	<div class="row" >
-		<div class="col-md-6" style="background-color:#081e5b">
+
+		<div class="col-md-6" style="background-color:#14325A">
 			<p id="intropara">
 				"Of all the problems you face in your life, managing your child’s asthma shouldn’t be one of them."<br>
 			- Asthma Amigo Team 
+
 			</p>
-			
+<!-- <a href="https://www.termsfeed.com/disclaimer/0f70687042159a80a607ad8c85635027">Terms and Conditions</a></div> -->
+
 <div id="buttonposition">
-				<a href="#Step1" class="button button1" >How It Works</a>
-				<a href="" class="button button1" >Download</a></div>
+		<div id="link">		Please read our <a href="https://www.termsfeed.com/disclaimer/0f70687042159a80a607ad8c85635027" onClick="return popup(this, 'notes')" >Disclaimer</a> and <a href="https://www.termsfeed.com/terms-conditions/d4b9882fc2199ff4f340323b0d50f705"  onClick="return popup(this, 'notes')" >Terms and Conditions </a>before downloading our app<br>
+</div>
+				<a href="#empty" class="cta-btn align-middle" >How It Works</a>
+				<a href="" class="cta-btn align-middle" >Download</a></div>
 		</div>
 		<div class="col-md-6" style="background-color:white">
 <img src="img/intro.png" width="100%" height="auto" alt="" >
 		</div>
 	</div>
 	</section>
-	<br><br><br>
-	<br><br>
-		<section id="Step1" class="wow fadeInUp">
-<div class="row" >
+	<section id="empty">
+	 <div class="row">
+	
 		   <div id="boxWrap">
-            <div class="view"><h2>Register</h2></div>
+            <div class="view"><h2>How it Works</h2></div>
+
+	 </div>
+</section>
+	 <div class="row">
+     
+        <div class="col-md-12">
+         
+          <div id="stepper2" class="bs-stepper">
+	
+            <div class="bs-stepper-header">
+              <div class="step" data-target="#test-nl-2">
+                <div class="btn step-trigger">
+                  <span class="bs-stepper-circle">1</span>
+                  <span class="bs-stepper-label">Register</span>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#test-nl-3">
+                <div class="btn step-trigger">
+                  <span class="bs-stepper-circle">2</span>
+                  <span class="bs-stepper-label">Action Plan</span>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#test-nl-4">
+                <div class="btn step-trigger">
+                  <span class="bs-stepper-circle">3</span>
+                  <span class="bs-stepper-label">Diary</span>
+                </div>
+              </div>
+			    <!-- <div class="line"></div> -->
+              <!-- <div class="step" data-target="#test-nl-4"> -->
+                               <!-- <div class="btn step-trigger"> -->
+                  <!-- <span class="bs-stepper-circle">4</span> -->
+                  <!-- <span class="bs-stepper-label">Record Attacks</span> -->
+                <!-- </div> -->
+              <!-- </div> -->
+            </div>
+            <div class="bs-stepper-content">
+     
+              <div id="test-nl-2" class="content">
+               	<section id="Step1" >
+<div class="row" >
+		   <!-- <div id="boxWrap"> -->
+            <!-- <div class="view"><h2>Step 1</h2></div> -->
 		
 		
 	
-	</div>
+	<!-- </div> -->
 	  
 	<div class="row" >
-		<div class="col-md-6" style="background-color:#081e5b">
+		<div class="col-md-6" style="background-color:#14325A">
 <p id="intropara">				
-Register your details and your asthmatic child's. This will help us to customize your experience.
+Register your and your asthmatic child's details. This will help us to customize your experience.
 			</p>
+			
+			<div id="buttonposition">
+			<span class="cta-btn align-middle" onclick="stepper2.next()">Next</span>
+			</div>
 			
 		</div>
 		<div class="col-md-6" style="background-color:white">
@@ -212,21 +210,27 @@ Register your details and your asthmatic child's. This will help us to customize
 
 </div>
 </section>
-<br><br><br>
-<section id="step-2" class="wow fadeInUp">
+                <!-- <button class="btn btn-primary" onclick="stepper2.next()">Next</button> -->
+              </div>
+              <div id="test-nl-3" class="content">
+                <section id="step-2" >
 <div class="row" >
-		   <div id="boxWrap">
-            <div class="view"><h2>Action Plan</h2></div>
+		   <!-- <div id="boxWrap"> -->
+            <!-- <div class="view"><h2>Step 2</h2></div> -->
 		
 		
 	
-	</div>
+	<!-- </div> -->
 	  
 	<div class="row" >
-		<div class="col-md-6" style="background-color:#081e5b">
+		<div class="col-md-6" style="background-color:#14325A">
 			<p  id="intropara">
 				Digitalize your child's asthma action plan and set reminders for each preventer medicine. 
 			</p>
+			<div id="buttonposition">
+			<span class="cta-btn align-middle" onclick="stepper2.next()">Next</span>
+			<span class="cta-btn align-middle" onclick="stepper2.previous()">Previous</span>
+			</div>
 
 		</div>
 		<div class="col-md-6" style="background-color:white">
@@ -236,23 +240,30 @@ Register your details and your asthmatic child's. This will help us to customize
 
 </div>
 </section>
-<br><br><br>
-<section id="step-3" class="wow fadeInUp">
-<div class="row"  >
-		   <div id="boxWrap">
-            <div class="view"><h2>Asthma Attack</h2></div>
+                <!-- <button class="btn btn-primary" onclick="stepper2.next()">Next</button> -->
+                <!-- <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button> -->
+              </div>
+			  <div id="test-nl-4" class="content">
+               <section id="step-3">
+<div class="row">
+		   <!-- <div id="boxWrap"> -->
+            <!-- <div class="view"><h2>Step 3</h2></div> -->
 		
 		
 	
-	</div>
+	<!-- </div> -->
 	  
 	<div class="row" >
-		<div class="col-md-6" style="background-color:#081e5b">
+		<div class="col-md-6" style="background-color:#14325A">
 			<p  id="intropara">
 				Record your Child's previous attacks in detail and receive notification for similar weather condition.  
 			</p>
-			
-
+			<div id="buttonposition">
+			<!-- <a href="" class="cta-btn align-middle" onclick="stepper2.next()">Next</a> -->
+			 <span class="cta-btn align-middle" onclick="stepper2.previous()">Previous</span> 
+			</div>
+  <!-- <button class="btn btn-primary" onclick="stepper2.next()">Next</button> -->
+                <!-- <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button> -->
 		</div>
 		<div class="col-md-6" style="background-color:white">
 <img src="img/step3.jpg" width="100%" height="auto" alt="" >
@@ -261,23 +272,11 @@ Register your details and your asthmatic child's. This will help us to customize
 
 </div>
 </section>
-<br><br><br>
-    <!-- <section id="call-to-action" class="wow fadeInUp"> -->
-      <!-- <div class="container"> -->
-        <!-- <div class="row"> -->
-          <!-- <div class="col-lg-9 text-center text-lg-left"> -->
-            <!-- <h3 class="cta-title">Call To Action</h3> -->
-            <!-- <p class="cta-text"> Don't let Asthma be a burden on to your Kid, download Asthma Amigo today !!</p> -->
-          <!-- </div> -->
-          <!-- <div class="col-lg-3 cta-btn-container text-center"> -->
-		  <!-- <img src="img/apple.png" alt=""> -->
- <!-- <a class="cta-btn align-middle" href="">Download </a>  -->
-			
-			<!-- </div> -->
-        <!-- </div> -->
-
-      <!-- </div> -->
-    <!-- </section><!-- #call-to-action --> 
+              
+              </div>
+            </div>
+          </div>	
+	
 	
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -285,15 +284,16 @@ Register your details and your asthmatic child's. This will help us to customize
           <div class="row">
             <div class="col-md-12 text-center">
 
-              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true" style="color: red;"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+              <p>
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true" style="color: red;"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> 
+	  <div>The application's icons are made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </p>
             </div>
           </div>
         </div>
       </footer>
           <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <!-- JavaScript Libraries -->
+   
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -310,5 +310,34 @@ Register your details and your asthmatic child's. This will help us to customize
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+   <script src="bs-stepper.min.js"></script>
+    <script>
+	function popup(mylink, windowname) {
+	if (! window.focus)return true; var href;
+	if (typeof(mylink) == 'string') href=mylink; 
+	else href=mylink.href; 
+	window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+	return false; 
+	}
+
+
+      <!-- var stepper1Node = document.querySelector('#stepper1') -->
+      <!-- var stepper1 = new Stepper(document.querySelector('#stepper1')) -->
+
+      <!-- stepper1Node.addEventListener('show.bs-stepper', function (event) { -->
+        <!-- console.warn('show.bs-stepper', event) -->
+      <!-- }) -->
+      <!-- stepper1Node.addEventListener('shown.bs-stepper', function (event) { -->
+        <!-- console.warn('shown.bs-stepper', event) -->
+      <!-- }) -->
+
+      var stepper2 = new Stepper(document.querySelector('#stepper2'), {
+          linear: false,
+          animation: true
+        })
+      <!-- var stepper3 = new Stepper(document.querySelector('#stepper3'), { -->
+          <!-- animation: true -->
+        <!-- }) -->
+    </script>
   </body>
 </html>

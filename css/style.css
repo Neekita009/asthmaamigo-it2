@@ -990,7 +990,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #call-to-action {
-  background: #081e5b;
+  background: #14325A;
   background-size: cover;
   padding: 40px 0;
 }
@@ -1261,7 +1261,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #header #logo img {
-    max-height: 20px;
+    max-height: 48px;
 	
 	
   }

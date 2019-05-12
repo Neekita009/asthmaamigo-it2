@@ -1,460 +1,134 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  <title>Asthma Amigo</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+<title></title>
 
-<!-- Js files -->
-<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script src="http://d3js.org/topojson.v0.min.js"></script>
-	<script src="https://d3js.org/d3.v4.js"></script>
-      <script src="http://d3js.org/topojson.v1.min.js"></script>
-      <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-      <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
-	  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
- 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- <link href="c3/c3.css" rel="stylesheet"> -->
+</head>
 
-  <!-- Favicons -->
-  <link href="img/favicon.jpg" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+<style>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+body {
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="bs-stepper.min.css">
-  <link href="css/style.css" rel="stylesheet">
-<link href="style2.css" rel="stylesheet">
-<style type="text/css">
-.cta-btn {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 26px;
-  border-radius: 3px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 3px solid #fff;
-  color: #fff;
+	background-image: url('grunge_patterns.jpg');
+	background-attachment: fixed;
+	color: #333;
 }
 
-.cta-btn:hover {
-  background: #50d8af;
-  border: 3px solid #50d8af;
-  color: white;
+.box {
+	border-radius: 3px;
+	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
 }
+
+.lightbox {
+	zoom: 1.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(10, 10, 10, 0.8);
+	text-align: center;
+	margin: auto;
+
+}
+
+div.horizontal {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+div.vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+::-moz-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
 </style>
 
-  <!-- =======================================================
-    Theme Name: Reveal
-    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
-</head>
-  <body>
-  
-   <header id="header">
-    <div class="container">
+<body>
 
-      <div id="logo" class="pull-left">
-	 
-        <h1> <a href="#body"><img src="img/logo1.jpg" height="100%" alt="" title="" /></a>
-		<!-- <a href="#body" class="scrollto">Asthma<span> Amigo</span></a> -->
-		</h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#">Home</a></li>
-          <li><a href="aboutAsthma.html">About Asthma</a></li>
-		   <li><a href="main.html">Statistics</a></li>
-		  <!-- <li><a href="#clients">Asthma in Children</a></li> -->
-      
-		   <!-- <li><a href="#portfolio">Asthma Amigo</a></li> -->
-       
-        
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
- <div class="container-fluid">
-	<br>
-	<section id="intro">
-	<div class="row" >
-
-		<div class="col-md-6" style="background-color:#14325A">
-			<p id="intropara">
-				"Of all the problems you face in your life, managing your child’s asthma shouldn’t be one of them."<br>
-			- Asthma Amigo Team 
-
-			</p>
-
-<div id="buttonposition">
-
-		<div id="link">		Please read our 
-		<span id="myBtn1" style="cursor: pointer;color: #51d8af;">Disclaimer</span>
-		
-		and
-		<span id="myBtn2" style="cursor: pointer;color: #51d8af;">Terms and Conditions </span>
-		before downloading our app<br>
-</div>
-				<a href="#empty" class="cta-btn align-middle" >How It Works</a>
-				<a href="">	  <img src="img/apple.png" alt=""> </a>
-
-				<!-- <a href="" class="cta-btn align-middle" >Download</a>-->
-				</div> 
-		</div>
-		<div class="col-md-6" style="background-color:white">
-<img src="img/intro.png" width="100%" height="auto" alt="" >
-		</div>
-	</div>
-	</section>
-	<section id="empty">
-	 <div class="row">
-	
-		   <div id="boxWrap">
-            <div class="view"><h2>How it Works</h2></div>
-
-	 </div>
-</section>
-	 <div class="row">
-     
-        <div class="col-md-12">
-         
-          <div id="stepper2" class="bs-stepper">
-	
-            <div class="bs-stepper-header">
-              <div class="step" data-target="#test-nl-2">
-                <div class="btn step-trigger">
-                  <span class="bs-stepper-circle">1</span>
-                  <span class="bs-stepper-label">Register</span>
-                </div>
-              </div>
-              <div class="line"></div>
-              <div class="step" data-target="#test-nl-3">
-                <div class="btn step-trigger">
-                  <span class="bs-stepper-circle">2</span>
-                  <span class="bs-stepper-label">Action Plan</span>
-                </div>
-              </div>
-              <div class="line"></div>
-              <div class="step" data-target="#test-nl-4">
-                <div class="btn step-trigger">
-                  <span class="bs-stepper-circle">3</span>
-                  <span class="bs-stepper-label">Diary</span>
-                </div>
-              </div>
-			    <!-- <div class="line"></div> -->
-              <!-- <div class="step" data-target="#test-nl-4"> -->
-                               <!-- <div class="btn step-trigger"> -->
-                  <!-- <span class="bs-stepper-circle">4</span> -->
-                  <!-- <span class="bs-stepper-label">Record Attacks</span> -->
-                <!-- </div> -->
-              <!-- </div> -->
-            </div>
-            <div class="bs-stepper-content">
-     
-              <div id="test-nl-2" class="content">
-               	<section id="Step1" >
-<div class="row" >
-		   <!-- <div id="boxWrap"> -->
-            <!-- <div class="view"><h2>Step 1</h2></div> -->
-		
-		
-	
-	<!-- </div> -->
-	  
-	<div class="row" >
-		<div class="col-md-6" style="background-color:#14325A">
-<p id="intropara">				
-Register your and your asthmatic child's details. This will help us to customize your experience.
-			</p>
-			
-			<div id="buttonposition">
-			<span class="cta-btn align-middle" onclick="stepper2.next()">Next</span>
+	<div id="loginbox" class="lightbox" >
+		<div class="horizontal">
+			<div class="vertical">
+				<div class="box">
+					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
+					<button id="loginbutton" type="button">Enter</button>
+					<p id="wrongPassword" style="display: none">wrong password</p>
+				</div>
 			</div>
-			
-		</div>
-		<div class="col-md-6" style="background-color:white">
-<img src="img/step1.png" width="100%" height="auto" alt="" >
 		</div>
 	</div>
 
-</div>
-</section>
-                <!-- <button class="btn btn-primary" onclick="stepper2.next()">Next</button> -->
-              </div>
-              <div id="test-nl-3" class="content">
-                <section id="step-2" >
-<div class="row" >
-		   <!-- <div id="boxWrap"> -->
-            <!-- <div class="view"><h2>Step 2</h2></div> -->
-		
-		
-	
-	<!-- </div> -->
-	  
-	<div class="row" >
-		<div class="col-md-6" style="background-color:#14325A">
-			<p  id="intropara">
-				Digitalize your child's asthma action plan and set reminders for each preventer medicine. 
-			</p>
-			<div id="buttonposition">
-			<span class="cta-btn align-middle" onclick="stepper2.next()">Next</span>
-			<span class="cta-btn align-middle" onclick="stepper2.previous()">Previous</span>
-			</div>
-
-		</div>
-		<div class="col-md-6" style="background-color:white">
-<img src="img/step2.jpg" width="100%" height="auto" alt="" >
-		</div>
-	</div>
-
-</div>
-</section>
-                <!-- <button class="btn btn-primary" onclick="stepper2.next()">Next</button> -->
-                <!-- <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button> -->
-              </div>
-			  <div id="test-nl-4" class="content">
-               <section id="step-3">
-<div class="row">
-		   <!-- <div id="boxWrap"> -->
-            <!-- <div class="view"><h2>Step 3</h2></div> -->
-		
-		
-	
-	<!-- </div> -->
-	  
-	<div class="row" >
-		<div class="col-md-6" style="background-color:#14325A">
-			<p  id="intropara">
-				Record your Child's previous attacks in detail and receive notification for similar weather condition.  
-			</p>
-			<div id="buttonposition">
-			<!-- <a href="" class="cta-btn align-middle" onclick="stepper2.next()">Next</a> -->
-			 <span class="cta-btn align-middle" onclick="stepper2.previous()">Previous</span> 
-			</div>
-  <!-- <button class="btn btn-primary" onclick="stepper2.next()">Next</button> -->
-                <!-- <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button> -->
-		</div>
-		<div class="col-md-6" style="background-color:white">
-<img src="img/step3.jpg" width="100%" height="auto" alt="" >
-		</div>
-	</div>
-
-</div>
-</section>
-              
-              </div>
-            </div>
-          </div>	
-	
-	<div id="myModal1" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close1">&times;</span>
-    <h1>Disclaimer</h1>
-
-<p>Last updated: May 09, 2019</p>
-
-<p>The information contained on Asthma Amigo mobile app (the "Service") is for general information purposes only.</p>
-
-<p> assumes no responsibility for errors or omissions in the contents on the Service.</p>
-
-<p>In no event shall  be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the Service or the contents of the Service.  reserves the right to make additions, deletions, or modification to the contents on the Service at any time without prior notice. This Disclaimer  has been created with the help of <a href="https://www.termsfeed.com/">TermsFeed</a>.</p>
-
-<p> does not warrant that the website is free of viruses or other harmful components.</p>
-
-<h2>External links disclaimer</h2>
-
-<p>Asthma Amigo mobile app may contain links to external websites that are not provided or maintained by or in any way affiliated with </p>
-
-<p>Please note that the  does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.</p>
-<p>This mobile application is intended for informational, educational, and research purposes only.It is not, and not intended, for use in the diagnosis of disease or cure, mitigation, treatment or prevention of disease. Users should exercise their own independent clinical judgment when using the mobile application</p>
-  </div>
-
-</div>
-
-<div id="myModal2" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close2">&times;</span>
-   <h1>Terms and Conditions ("Terms")</h1>
 
 
-<p>Last updated: May 09, 2019</p>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
 
-<p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the asthmaamigo.tk website (the "Service") operated by Asthma Amigo ("us", "we", or "our").</p>
+	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 
-<p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>
-
-<p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service. The Terms and Conditions agreement  for Asthma Amigo has been created with the help of <a href="https://www.termsfeed.com/">TermsFeed</a>.</p>
-
+	<script type="text/javascript">
+	"use strict";
 
 
+	function loadPage(pwd) {
 
-<h2>Links To Other Web Sites</h2>
+		var hash= pwd;
+		hash= Sha1.hash(pwd);
+		var url= hash + "/index.html";
 
-<p>Our Service may contain links to third-party web sites or services that are not owned or controlled by Asthma Amigo.</p>
+		$.ajax({
+			url : url,
+			dataType : "html",
+			success : function(data) {
 
-<p>Asthma Amigo has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that Asthma Amigo shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
+				window.location= url;
 
-<p>We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.</p>
-
-
-<h2>Termination</h2>
-
-<p>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
-
-<p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
-
-
-
-<h2>Governing Law</h2>
-
-<p>These Terms shall be governed and construed in accordance with the laws of Victoria, Australia, without regard to its conflict of law provisions.</p>
-
-<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>
+			},
+			error : function(xhr, ajaxOptions, thrownError) {
 
 
-<h2>Changes</h2>
+				parent.location.hash= hash;
 
-<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 15 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+				//$("#wrongPassword").show();
+				$("#password").attr("placeholder","wrong password");
+				$("#password").val("");
+			}
+		});
+	}
 
-<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
 
+	$("#loginbutton").on("click", function() {
+		loadPage($("#password").val());
+	});
+	$("#password").keypress(function(e) {
+		if (e.which == 13) {
 
-<h2>Contact Us</h2>
+			loadPage($("#password").val());
+		}
+	});
+	$("#password").focus();
 
-<p>If you have any questions about these Terms, please contact us.</p>
-  </div>
+	</script>
 
-</div>
-
-<footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
-<div>The application's icons are made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-	
-      </div>
-      <div class="credits">
-       Know more <a href="newabout.html">About US </a>
-      </div>
-    </div>
-  </footer><!-- #footer -->
-          <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-   
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/sticky/sticky.js"></script>
- <!-- <script src="ResponsiveMap.js"></script> -->
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-   <script src="bs-stepper.min.js"></script>
-    <script>
-	
-	<!-- function popup(mylink, windowname) { -->
-	<!-- if (! window.focus)return true; var href; -->
-	<!-- if (typeof(mylink) == 'string') href=mylink;  -->
-	<!-- else href=mylink.href;  -->
-	<!-- window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); -->
-	<!-- return false;  -->
-	<!-- } -->
-
-// Get the modal
-var modal1 = document.getElementById('myModal1');
-
-// Get the button that opens the modal
-var btn1 = document.getElementById("myBtn1");
-
-// Get the <span> element that closes the modal
-var span1 = document.getElementsByClassName("close1")[0];
-
-// When the user clicks the button, open the modal 
-btn1.onclick = function() {
-  modal1.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span1.onclick = function() {
-  modal1.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
-  }
-}
-  // Get the modal
-var modal2 = document.getElementById('myModal2');
-
-// Get the button that opens the modal
-var btn2 = document.getElementById("myBtn2");
-
-// Get the <span> element that closes the modal
-var span2 = document.getElementsByClassName("close2")[0];
-
-// When the user clicks the button, open the modal 
-btn2.onclick = function() {
-  modal2.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span2.onclick = function() {
-  modal2.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal2) {
-    modal2.style.display = "none";
-  }
-}    
-
-      var stepper2 = new Stepper(document.querySelector('#stepper2'), {
-          linear: false,
-          animation: true
-        })
-     
-    </script>
-  </body>
+</body>
 </html>

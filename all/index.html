@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Asthma Amigo</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+<!-- Js files -->
+<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="http://d3js.org/topojson.v0.min.js"></script>
+	<script src="https://d3js.org/d3.v4.js"></script>
+      <script src="http://d3js.org/topojson.v1.min.js"></script>
+      <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+      <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+	  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+ <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+ 
+
+<!-- <link href="c3/c3.css" rel="stylesheet"> -->
+
+  <!-- Favicons -->
+  <link href="img/favicon.jpg" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="bs-stepper.min.css">
+  <link href="css/style.css" rel="stylesheet">
+<link href="style2.css" rel="stylesheet">
+<style type="text/css">
+.cta-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 26px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+.cta-btn:hover {
+  background: #50d8af;
+  border: 3px solid #50d8af;
+  color: white;
+}
+</style>
+
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+  <body>
+  
+   <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+	 
+        <h1> <a href="#"><img src="img/logo1.jpg" height="100%" alt="" title="" /></a>
+		<!-- <a href="#body" class="scrollto">Asthma<span> Amigo</span></a> -->
+		</h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#">Home</a></li>
+          <li><a href="aboutAsthma.html">About Asthma</a></li>
+		   <li><a href="statistics.html">Statistics</a></li>
+		  <!-- <li><a href="#clients">Asthma in Children</a></li> -->
+      
+		   <!-- <li><a href="#portfolio">Asthma Amigo</a></li> -->
+       
+        
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+ <div class="container-fluid">
+	<br>
+	
+	 	
+	<section id="intro">
+	<div class="row" >
+
+		<div class="col-md-6" style="background-color:#14325A">
+		<div id="gap"> </div>
+			<p id="intropara">
+				"With all the problems in your life, managing your child's asthma shouldn't be one of them."<br>
+			- Asthma Amigo Team 
+
+			</p>
+<div id="gap"> </div>
+<div id="buttonposition">
+		<div id="link">		Please read 
+		<span id="myBtn1" style="cursor: pointer;color: #51d8af;">Disclaimer</span>
+		
+		<!-- and -->
+		<!-- <span id="myBtn2" style="cursor: pointer;color: #51d8af;">Terms & Conditions </span> -->
+		before downloading the app<br>
+</div>
+<div id="gap"> </div>
+				<a href="#empty" class="cta-btn align-middle" >How it works</a>
+				<!-- <a href="">	  <img src="img/apple.png" alt=""> </a> -->
+
+				<a href="" class="cta-btn align-middle" >Download</a>
+<div id="linksmall">	<p >		 *Available for iPhones 6 and later version only</p></div>
+				</div>
+<div id="gap"> </div>
+<div id="gap"> </div>				
+		</div>
+		<div class="col-md-6" style="background-color:#14325A">
+<img src="img/family.jpeg" width="100%" height="100%" alt="" >
+		</div>
+	</div>
+	</section>
+	<section id="empty">
+	 <div class="row">
+	
+		   <div id="boxWrap">
+            <div class="view"><h2>How it works</h2></div>
+
+	 </div>
+</section>
+	 <div class="row">
+     
+        <div class="col-md-12">
+         
+          <div id="stepper2" class="bs-stepper">
+	<div class="corview">
+            <div class="bs-stepper-header">
+              <div class="step" data-target="#test-nl-2">
+                <div class="btn step-trigger">
+                   <span class="bs-stepper-circle"></span> 
+                  <!-- <span class="bs-stepper-label">Register</span> -->
+                </div>
+              </div>
+              <!-- <div class="line"></div> -->
+              <div class="step" data-target="#test-nl-3">
+                <div class="btn step-trigger">
+                   <span class="bs-stepper-circle"></span> 
+                  <!-- <span class="bs-stepper-label">Action Plan</span> -->
+                </div>
+              </div>
+              <!-- <div class="line"></div> -->
+              <div class="step" data-target="#test-nl-4">
+                <div class="btn step-trigger">
+                  <span class="bs-stepper-circle"></span> 
+                  <!-- <span class="bs-stepper-label">Daily</span> -->
+                </div>
+              </div>
+			    <!-- <div class="line"></div> -->
+              <div class="step" data-target="#test-nl-1"> 
+                               <div class="btn step-trigger">
+                   <span class="bs-stepper-circle"></span> 
+                  <!-- <span class="bs-stepper-label">Diary</span> -->
+                </div>
+              </div>
+            </div>
+			</div>
+            <div class="bs-stepper-content">
+
+			        <div id="test-nl-1" class="content">
+               	<section id="Step4" >
+<div class="row" >
+		 
+	<div class="row" >
+		<div class="col-md-6" style="background-color:#14325A">
+<p id="intropara">				
+Step 4: Log attacks in diary <br><br></p>
+<p id="introparasmall">
+Provide details asked in the diary tab whenever the child gets an asthma attack and Asthma Amigo will alert you if a similar
+climatic condition is nearing in future.		
+</p>
+		
+			<div id="previous">
+			<span class="prevnext align-middle" onclick="stepper2.previous()"> << Previous</span>
+			</div>
+			
+		</div>
+		<div class="col-md-6" style="background-color:white">
+<img src="img/step-3.jpeg" width="100%" height="auto" alt="" >
+		</div>
+	</div>
+
+</div>
+</section>
+              </div>
+			  
+              <div id="test-nl-2" class="content">
+  
+			  
+               	<section id="Step1" >
+<div class="row" >
+		   <!-- <div id="boxWrap"> -->
+            <!-- <div class="view"><h2>Step 1</h2></div> -->
+		
+		
+	
+	<!-- </div> -->
+	  
+	<div class="row" >
+		<div class="col-md-6" style="background-color:#14325A">
+<p id="intropara">				
+Step1: Create your profile<br><br></p>
+<p id="introparasmall">
+Start by entering your details as well as your child’s details through our app to get started.
+			</p>
+			
+			<div id="next">
+			<span  class="prevnext align-middle" onclick="stepper2.next()">Next >> </span>
+			</div>
+			
+		</div>
+		<div class="col-md-6" style="background-color:white">
+<img src="img/step-1.jpeg" width="100%" height="auto" alt="" >
+		</div>
+	</div>
+
+</div>
+</section>
+                <!-- <button class="btn btn-primary" onclick="stepper2.next()">Next</button> -->
+              </div>
+
+              <div id="test-nl-3" class="content">
+                <section id="step-2" >
+<div class="row" >
+		   <!-- <div id="boxWrap"> -->
+            <!-- <div class="view"><h2>Step 2</h2></div> -->
+		
+		
+	
+	<!-- </div> -->
+	  
+	<div class="row" >
+		<div class="col-md-6" style="background-color:#14325A">
+			<p  id="intropara">
+			Step 2: Set action plan and reminders<br><br></p>
+<p id="introparasmall">
+Enter preventers and relievers for each health condition as per your child’s asthma action plan and set reminders for all health condition.
+			</p>
+			<div id="next">
+			<span  class="prevnext align-middle" onclick="stepper2.next()">Next >> </span></div>
+			<div id="previous">
+			<span class="prevnext align-middle" onclick="stepper2.previous()"> << Previous</span>
+			</div>
+
+		</div>
+		<div class="col-md-6" style="background-color:white">
+<img src="img/step-2.jpeg" width="100%" height="auto" alt="" >
+		</div>
+	</div>
+
+</div>
+</section>
+                <!-- <button class="btn btn-primary" onclick="stepper2.next()">Next</button> -->
+                <!-- <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button> -->
+              </div>
+			  <div id="test-nl-4" class="content">
+               <section id="step-3">
+<div class="row">
+		   <!-- <div id="boxWrap"> -->
+            <!-- <div class="view"><h2>Step 3</h2></div> -->
+		
+		
+	
+	<!-- </div> -->
+	  
+	<div class="row" >
+		<div class="col-md-6" style="background-color:#14325A">
+			<p  id="intropara">
+				Step 3: Set health condition everyday<br><br></p>
+<p id="introparasmall">
+Select health condition every day and our app will remind you for following action plan accurately. Also, always be aware of weather conditions for the day.
+			</p>
+			
+			<div id="next">
+			<span  class="prevnext align-middle" onclick="stepper2.next()">Next >> </span></div>
+			<div id="previous">
+			<span class="prevnext align-middle" onclick="stepper2.previous()"> << Previous</span>
+			</div>
+			
+  <!-- <button class="btn btn-primary" onclick="stepper2.next()">Next</button> -->
+                <!-- <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button> -->
+		</div>
+		<div class="col-md-6" style="background-color:white">
+<img src="img/intro.jpeg" width="100%" height="auto" alt="" >
+		</div>
+	</div>
+
+</div>
+</section>
+              
+              </div>
+            </div>
+          </div>	
+	
+	<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close1">&times;</span>
+    <h1>Disclaimer</h1>
+
+<p>Last updated: May 12, 2019</p>
+
+<p>The information contained on Asthma Amigo mobile app is intended for informational, educational, and research purposes only. It is not, and not intended, for use in the diagnosis of disease or cure, mitigation, treatment or prevention of disease. Users should exercise their own independent clinical judgment when using the mobile application. 
+</p><p>Asthma amigo assumes no responsibility for errors or omissions in the contents on the Service.</p>
+
+<p>In no event we shall be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the Service or the contents of the Service. Asthma amigo reserves the right to make additions, deletions, or modification to the contents on the service at any time without prior notice. 
+</p>
+<p>This Disclaimer has been created with the help of  <a href="https://www.termsfeed.com/">TermsFeed</a>.</p>
+
+<h1>External links disclaimer</h1>
+<p>Asthma Amigo mobile app may contain links to external websites that are not provided or maintained by or in any way affiliated with.<br>Please note that the does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.</p>
+
+<br>
+
+
+  </div>
+
+</div>
+
+
+
+<footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
+<div>The application's icons are made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+	
+      </div>
+      <div class="credits">
+       Know more <a href="aboutus.html">About us </a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+          <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+   
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+ <!-- <script src="ResponsiveMap.js"></script> -->
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+   <script src="bs-stepper.min.js"></script>
+    <script>
+	
+	<!-- function popup(mylink, windowname) { -->
+	<!-- if (! window.focus)return true; var href; -->
+	<!-- if (typeof(mylink) == 'string') href=mylink;  -->
+	<!-- else href=mylink.href;  -->
+	<!-- window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); -->
+	<!-- return false;  -->
+	<!-- } -->
+
+// Get the modal
+var modal1 = document.getElementById('myModal1');
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("myBtn1");
+
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("close1")[0];
+
+// When the user clicks the button, open the modal 
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+       var stepper2 = new Stepper(document.querySelector('#stepper2'), {
+          linear: false,
+          animation: true
+        })
+     
+    </script>
+  </body>
+</html>

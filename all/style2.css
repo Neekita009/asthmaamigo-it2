@@ -31,6 +31,13 @@ font-weight:bold;
 padding: 10px 0px 30px 20px;
 color: white;
 }
+#linksmall{
+	font-weight:bold;
+padding: 10px 0px 30px 20px;
+color: white;
+font-size:10px;
+	
+}
 
 #link a{
 
@@ -50,10 +57,23 @@ padding: 20px 0px 20px 60px;
 #buttonposition img{
 	max-width: 130px;
 	max-height: 74px;
+}
+
+#gap{
 	
+	padding-top:22px;
 	
 }
 
+#next{
+	/* padding: 0px 50px 0px 0px;  */
+	float : right;
+}
+
+#previous{
+	padding: 0px 0px 0px 20px; 
+	float:left;
+}
 
 .heading 
 {
@@ -72,20 +92,36 @@ color: #0c2e8a;
 .view {
    width: 300px;
 	color:#081e5b;
-   margin: 10px 15px 0px auto;
+   margin: 20px 15px 0px auto;
    margin-left: auto;
    margin-right: auto;
    overflow: hidden;
-   <!-- background:#081e5b; -->
+   /* <!-- background:#081e5b; --> */
    
 }
-
+.corview {
+   width: 252px;
+	/* color:#081e5b; */
+   /* margin: 10px 15px 0px auto; */
+   margin-left: auto;
+   margin-right: auto;
+   /* overflow: hidden; */
+   /* <!-- background:#081e5b; --> */
+   
+}
 #intropara{
 font-size:30px;
-padding: 20px 0px 20px 60px;
+padding: 20px 0px 5px 50px;
 color:white;
+font-weight:bold;
 }
-
+#introparasmall{
+	
+font-size:20px;
+padding: 5px 0px 5px 60px;
+color:white;	
+	
+}
 
 #intro{
 
@@ -103,13 +139,27 @@ height: auto;
 
 }
 @media (max-width:750px){
+	
+#gap{
+		padding-top:0px;
+	
+}
+
+#introparasmall{
+	
+font-size:15px;
+padding: 5px 15px 5px 40px;
+color:white;	
+	
+}
+
 
 #intropara{
 font-size:18px;
-padding: 80px 0px 5px 60px;
+padding: 50px 5px 5px 60px;
 }
 #link{
-font-size:11px;
+font-size:13px;
 font-weight:bold;
 padding: 5px auto;
 }
@@ -121,6 +171,18 @@ font-size:11px;
 .view {
 font-size:11px;
 }
+
+.corview {
+   width: 180px;
+	/* color:#081e5b; */
+   /* margin: 10px 15px 0px auto; */
+   margin-left: auto;
+   margin-right: auto;
+   /* overflow: hidden; */
+   /* <!-- background:#081e5b; --> */
+   
+}
+
 }
 
 /* The Modal (background) */

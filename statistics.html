@@ -1,368 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Asthma Amigo</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-
-<!-- Js files -->
-<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script src="http://d3js.org/topojson.v0.min.js"></script>
-	<script src="https://d3js.org/d3.v4.js"></script>
+   <head>
+      <meta charset="utf-8">
+      <title>Asthma Amigo</title>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="" name="keywords">
+      <meta content="" name="description">
+      <!-- Js files -->
+      <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+      <script src="http://d3js.org/topojson.v0.min.js"></script>
+      <script src="https://d3js.org/d3.v4.js"></script>
       <script src="http://d3js.org/topojson.v1.min.js"></script>
       <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
       <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
-	  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
- <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-
-<!-- <link href="c3/c3.css" rel="stylesheet"> -->
-
-  <!-- Favicons -->
-  <link href="img/favicon.jpg" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
- <link rel="stylesheet" type="text/css" href="MapCss.css"> 
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-
-
-  <!-- =======================================================
-    Theme Name: Reveal
-    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
-</head>
-
-<body id="body" onload="sizeChange()">
-
-   <header id="header">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
-	 
-        <h1> <a href="index.html"><img src="img/logo1.jpg" height="100%" alt="" title="" /></a>
-		<!-- <a href="#body" class="scrollto">Asthma<span> Amigo</span></a> -->
-		</h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li ><a href="index.html">Home</a></li>
-          <li><a href="aboutAsthma.html">About Asthma</a></li>
-		   <li class="menu-active"><a href="statistics.html">Statistics</a></li>
-
-		
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-<br><br>
- 
-  
- 
-    <section id="clients">
-      <div class="container">
-        <div class="section-header">
-          <h2>Asthma in Children</h2>
-            <p>
-Asthma affects people of all ages, but it most often starts during childhood. 
-Asthma can't be cured, but you and your child can mitigate the effects of the symptoms by following an asthma action plan. This is a written plan you develop with your child's doctor to track symptoms and adjust treatment.<br>
-With proper treatment and precautions, even severe asthma can be kept under control.<br>
-<span><b>
-Do you have a action plan yet?</b>
-</span>
- </p>
-        </div>
-
-       
-
-      </div>
-    </section><!-- #clients -->
-
-	
-   
-    <section id="australia" >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-             <div id="containerChart">
-
-
-			</div>
-          </div>
-
-          <div class="col-lg-4 content">
-            <h2>Statistics in Australia</h2>
-			<ul>
-              <li><i class="ion-android-checkmark-circle"></i>  1 in 10 Australians have asthma – around 2.5 million.</li>
-			  <li><i class="ion-android-checkmark-circle"></i>  It’s more common in males under the age of 15</li>
-              <li><i class="ion-android-checkmark-circle"></i>  Rate of Asthmatic children under the age of 15, hospitalised is at at 442 per 100,000 population</li>
-              <li><i class="ion-android-checkmark-circle"></i> Click on <b >Victoria</b> in the map, for detail information.</li>
-
-			</ul>
-          </div>
-        </div>
-		  
-
-       </div>
-    </section><!-- #about -->
-
-    <!--==========================
-      Services Section
-    ============================-->
-    <section id="services">
-      <div class="container">
-        <div class="section-header">
-          <h2>Victoria</h2>
-          <p>The line graph shows the trajectory of Asthma in children of Victoria below the age of 12 from the year 2013 to 2018.<br>
-The bar graph shows years lost due to disability (YLD) or the burden of disease. YLD is a measurement of years of productive life lost due to disability.
-This graph shows the cumulative number of years which these children have spent in hospitals or taking rest due to the disease instead of going to school, playing or doing any other activity. 
-
-		  </p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInLeft">
-              <!-- <div class="icon"><i class="fa fa-bar-chart"></i></div> -->
-               <div id="containerLine">
-			</div>
+      <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+      <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+      <!-- Favicons -->
+      <link href="img/favicon.jpg" rel="icon">
+      <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+      <!-- Bootstrap CSS File -->
+      <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Libraries CSS Files -->
+      <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link href="lib/animate/animate.min.css" rel="stylesheet">
+      <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+      <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+      <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+      <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/MapCss.css">
+      <!-- Main Stylesheet File -->
+      <link href="css/style.css" rel="stylesheet">
+      <!-- =======================================================
+         Theme Name: Reveal
+         Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+         Author: BootstrapMade.com
+         License: https://bootstrapmade.com/license/
+         ======================================================= -->
+   </head>
+   <body id="body" onload="sizeChange()">
+      <header id="header">
+         <div class="container">
+            <div id="logo" class="pull-left">
+               <h1> <a href="index.html"><img src="img/logo1.jpg" height="100%" alt="" title="" /></a>
+               </h1>
+             
             </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInRight">
-              <!-- <div class="icon"><i class="fa fa-picture-o"></i></div> -->
-              <div id="containerStackBar">
+            <nav id="nav-menu-container">
+               <ul class="nav-menu">
+                  <li ><a href="index.html">Home</a></li>
+                  <li><a href="aboutAsthma.html">About Asthma</a></li>
+                  <li class="menu-active"><a href="statistics.html">Statistics</a></li>
+               </ul>
+            </nav>
+            <!-- #nav-menu-container -->
+         </div>
+      </header>
+      <!-- #header -->
+      <br><br>
+      <!--==========================
+         Introduction Section
+         ============================-->
+      <section id="clients">
+         <div class="container">
+            <div class="section-header">
+               <h2>Asthma in Children</h2>
+               <p>
+                  Asthma affects people of all ages, but it most often starts during childhood. 
+                  Asthma can't be cured, but you and your child can mitigate the effects of the symptoms by following an asthma action plan. This is a written plan you develop with your child's doctor to track symptoms and adjust treatment.<br>
+                  With proper treatment and precautions, even severe asthma can be kept under control.<br>
+                  <span><b>
+                  Do you have a action plan yet?</b>
+                  </span>
+               </p>
             </div>
-          </div>
-
-     
-
-        </div>
-
-      </div>
-    </section><!-- #services -->
-
-	 <section id="weather">
-      <div class="container">
-	  <h2>Weather Condition for Asthma in Victoria</h2>
-	   <p> Extreme weathers, sudden fluctuation in Weather and Humidity is one of the biggest triggers for Asthma Patients. Below, the bar graph and the Map shows the Average Number of Hours which were unhealthy and Hazardous based on the temperature, Humidity, and sudden weather changes for the asthmatic Patients in each month in 2018 for different regions in Victoria.
-
-			<br>
-Asthma Amigo will help you identify such weather condition so that the required Precautions could be taken.  			
-	  </p>
-
-        <div class="row">
-          <div class="col-lg-12">
-                        <div id="vizContainer" ></div>            
-
-          </div>
-
-        
-        </div>
-		  
-
-       </div>
-    </section>
-	
-	
-	
-    <!--==========================
-      Our Portfolio Section
-    ============================-->
-    <section id="portfolio">
-      <div class="container">
-        <div class="section-header">
-          <h2>Asthma<span> Amigo</span></h2>
-          <p>Asthma can't be cured, but you and your child can reduce symptoms by following an asthma action plan. This is a written plan you develop with your child's doctor to track symptoms and adjust treatment.
-		  Asthma Amigo will help you to create a e-Action plan and would provide appropriate alerts and reminders based on the entered action plan. <br>
-
-		  </p>
-        </div>
-      </div>
-
-      <div class="container-fluid">
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/1.jpg" class="portfolio-popup">
-                <img src="img/portfolio/1.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2>Portfolio Item 1</h2></div>
-                </div>
-              </a>
+         </div>
+      </section>
+      <!-- #Introduction -->
+      <!--==========================
+         Australia Map Section
+         ============================-->
+      <section id="australia" >
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8">
+                  <div id="containerChart">
+                  </div>
+               </div>
+               <div class="col-lg-4 content">
+                  <h2>Statistics in Australia</h2>
+                  <ul>
+                     <li><i class="ion-android-checkmark-circle"></i>  1 in 10 Australians have asthma – around 2.5 million.</li>
+                     <li><i class="ion-android-checkmark-circle"></i>  It’s more common in males under the age of 15</li>
+                     <li><i class="ion-android-checkmark-circle"></i>  Rate of Asthmatic children under the age of 15, hospitalised is at at 442 per 100,000 population</li>
+                     <li><i class="ion-android-checkmark-circle"></i> Click on <b>Victoria</b> in the map, for detail information.</li>
+                  </ul>
+               </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/2.jpg" class="portfolio-popup">
-                <img src="img/portfolio/2.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2>Portfolio Item 2</h2></div>
-                </div>
-              </a>
+         </div>
+      </section>
+      <!-- #Map -->
+      <!--==========================
+         Victoria graph Section
+         ============================-->
+      <section id="services">
+         <div class="container">
+         <div class="section-header">
+            <h2>Victoria</h2>
+            <p>The line graph shows the trajectory of Asthma in children of Victoria below the age of 12 from the year 2013 to 2018.<br>
+               The bar graph shows years lost due to disability (YLD) or the burden of disease. YLD is a measurement of years of productive life lost due to disability.
+               This graph shows the cumulative number of years which these children have spent in hospitals or taking rest due to the disease instead of going to school, playing or doing any other activity. 
+            </p>
+         </div>
+         <div class="row">
+            <div class="col-lg-6">
+               <div class="box wow fadeInLeft">
+                  <div id="containerLine">
+                  </div>
+               </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/3.jpg" class="portfolio-popup">
-                <img src="img/portfolio/3.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2>Portfolio Item 3</h2></div>
-                </div>
-              </a>
+            <div class="col-lg-6">
+               <div class="box wow fadeInRight">
+                  <div id="containerStackBar">
+                  </div>
+               </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/4.jpg" class="portfolio-popup">
-                <img src="img/portfolio/4.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2>Portfolio Item 4</h2></div>
-                </div>
-              </a>
+         </div>
+      </section>
+      <!-- #graph -->
+      <!--==========================
+         tableau Victoria Map and filter Section
+         ============================-->
+      <section id="weather">
+         <div class="container">
+            <h2>Weather Condition for Asthma in Victoria</h2>
+            <p> Extreme weathers, sudden fluctuation in Weather and Humidity is one of the biggest triggers for Asthma Patients. Below, the bar graph and the Map shows the Average Number of Hours which were unhealthy and Hazardous based on the temperature, Humidity, and sudden weather changes for the asthmatic Patients in each month in 2018 for different regions in Victoria.
+               <br>
+               Asthma Amigo will help you identify such weather condition so that the required Precautions could be taken.  			
+            </p>
+            <div class="row">
+               <div class="col-lg-12">
+                  <div id="vizContainer" ></div>
+               </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/5.jpg" class="portfolio-popup">
-                <img src="img/portfolio/5.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2>Portfolio Item 5</h2></div>
-                </div>
-              </a>
+         </div>
+      </section>
+      <!-- #weather -->
+      <!--==========================
+         Call To Action Section
+         ============================-->
+      <section id="call-to-action" >
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-9 text-center text-lg-left">
+                  <h3 class="cta-title">Call To Action</h3>
+                  <p class="cta-text"> Don't let Asthma be a burden on to your Kid, download Asthma Amigo today !!</p>
+               </div>
+               <div class="col-lg-3 cta-btn-container text-center">
+                  <a class="cta-btn align-middle" href="">Download </a> 
+               </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/6.jpg" class="portfolio-popup">
-                <img src="img/portfolio/6.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2>Portfolio Item 6</h2></div>
-                </div>
-              </a>
+         </div>
+      </section>
+      <!-- #call-to-action -->
+      <!--==========================
+         Footer
+         ============================-->
+      <footer id="footer">
+         <div class="container">
+            <div class="copyright">
+               &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
+               <div>The application's icons are made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/7.jpg" class="portfolio-popup">
-                <img src="img/portfolio/7.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2>Portfolio Item 7</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/8.jpg" class="portfolio-popup">
-                <img src="img/portfolio/8.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 >Portfolio Item 8</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- #portfolio -->
-
-   
-    <!--==========================
-      Call To Action Section
-    ============================-->
-    <section id="call-to-action" >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Call To Action</h3>
-            <p class="cta-text"> Don't let Asthma be a burden on to your Kid, download Asthma Amigo today !!</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-		  <!-- <img src="img/apple.png" alt=""> -->
-		  				<!-- <a href="">	  <img src="img/apple.png" alt=""> </a> -->
-
- <a class="cta-btn align-middle" href="">Download </a> 
-			
-			</div>
-        </div>
-
-      </div>
-    </section><!-- #call-to-action -->
-
-
-
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
-<div>The application's icons are made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-	
-      </div>
-      <div class="credits">
-      Know more <a href="aboutus.html">About us </a>
-      </div>
-    </div>
-  </footer><!-- #footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/sticky/sticky.js"></script>
- <script src="ResponsiveMap.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
-</body>
+         </div>
+      </footer>
+      <!-- #footer -->
+      <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+      <!-- JavaScript Libraries -->
+      <script src="lib/jquery/jquery.min.js"></script>
+      <script src="lib/jquery/jquery-migrate.min.js"></script>
+      <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="lib/easing/easing.min.js"></script>
+      <script src="lib/superfish/hoverIntent.js"></script>
+      <script src="lib/superfish/superfish.min.js"></script>
+      <script src="lib/wow/wow.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+      <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+      <script src="lib/sticky/sticky.js"></script>
+      <script src="js/BasicJavaScript.js"></script>
+      <!-- Contact Form JavaScript File -->
+      <!-- Template Main Javascript File -->
+      <script src="js/main.js"></script>
+   </body>
 </html>

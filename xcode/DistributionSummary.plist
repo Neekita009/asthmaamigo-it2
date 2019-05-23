@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>asthma_amigo.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>58318BFB2887F0D4231BE4CEE882A3A38C11F605</string>
+				<key>dateExpires</key>
+				<string>6/4/20</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>58318BFB2887F0D4231BE4CEE882A3A38C11F605</string>
+						<key>dateExpires</key>
+						<string>6/4/20</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>Alamofire.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>D4E88Q87ES</string>
+						<key>name</key>
+						<string>Monash University (Caulfield School of Information Technology)</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>58318BFB2887F0D4231BE4CEE882A3A38C11F605</string>
+						<key>dateExpires</key>
+						<string>6/4/20</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>IQKeyboardManagerSwift.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>D4E88Q87ES</string>
+						<key>name</key>
+						<string>Monash University (Caulfield School of Information Technology)</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>58318BFB2887F0D4231BE4CEE882A3A38C11F605</string>
+						<key>dateExpires</key>
+						<string>6/4/20</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>SwiftyJSON.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>D4E88Q87ES</string>
+						<key>name</key>
+						<string>Monash University (Caulfield School of Information Technology)</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>R5Z8QE3A4F.NP.asthma-amigo</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>D4E88Q87ES</string>
+				<key>get-task-allow</key>
+				<true/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>R5Z8QE3A4F.NP.asthma-amigo</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>asthma_amigo.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>eab7ad77-e7f5-402c-b88e-c4ff8a67a95f</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>D4E88Q87ES</string>
+				<key>name</key>
+				<string>Monash University (Caulfield School of Information Technology)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

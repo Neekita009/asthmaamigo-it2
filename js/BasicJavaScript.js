@@ -88,7 +88,7 @@ function run() {
 				return color(scaleDensity(d.properties.Asthma))
 
 			})
-			.on('click', function (d) {
+			.on('click', function (d) {    //onclick function
 				if (d.properties.STATE_NAME == "Victoria") {
 					clicked();
 
@@ -100,9 +100,9 @@ function run() {
 				}
 
 			})
-			.on('mouseover', function (d) {
+			.on('mouseover', function (d) { //hover function
 
-				if (d.properties.STATE_NAME != "Victoria") {
+		
 					d3.select(this).classed("selected", true);
 					tooltip.html(d.properties.STATE_NAME + ' Patient' + ": " + d.properties.Asthma)
 						.styles({
@@ -112,10 +112,10 @@ function run() {
 					tooltip.transition()
 						.duration(200)
 						.style('opacity', .9);
-				}
+			
 
 			})
-			.on('mouseout', function (d) {
+			.on('mouseout', function (d) { //mouseout function
 				if (d.properties.STATE_NAME == "Victoria") {} else {
 					d3.select(this).classed("selected", false);
 					tooltip.transition()
@@ -124,7 +124,7 @@ function run() {
 				}
 			});
 
-
+// text on the MAP
 		svg.selectAll("text")
 			.data(data.features)
 			.enter()
@@ -165,7 +165,7 @@ function run() {
 			roundY: 10
 		}
 
-
+// giving variable for the size legend 
 		var legendContainer = svg.append('rect')
 			.attrs({
 				'x': legendContainerSettings.x,
